@@ -137,7 +137,7 @@ Lists the importance and ranking of each feature.
 
 ![Screenshot 2024-07-18 181257](https://github.com/user-attachments/assets/dfe126fc-b7b1-4ab7-9355-8498622e7478)
 
-![Screenshot 2024-07-18 180959](https://github.com/user-attachments/assets/2824db6b-26a2-453c-8b32-59e3e76744b0)
+
 
 
 # Conclusion
