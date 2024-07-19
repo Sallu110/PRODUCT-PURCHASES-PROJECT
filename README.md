@@ -60,6 +60,8 @@ from sklearn.metrics import confusion_matrix
 cm    = confusion_matrix(Y_test,R_predict)
 score = rfc.score(X_test,Y_test) 
 
+![Screenshot 2024-07-19 200449](https://github.com/user-attachments/assets/303bfd7f-5780-4e26-9b4d-0d1df8293d61)
+
 cm stands for confusion matrix
 
 ![Screenshot 2024-07-18 180911](https://github.com/user-attachments/assets/d0defb6c-c326-441e-9937-18fd0cd6afef)
@@ -89,6 +91,9 @@ R_predict2 = rfc2.predict(X_test_rfe)
 
 cm2   = confusion_matrix(Y_test,R_predict2)
 score2 = rfc2.score(X_test_rfe,Y_test)   
+
+![Screenshot 2024-07-19 200511](https://github.com/user-attachments/assets/30401111-c0fc-4cd2-9d37-62edbc3f70c4)
+
 
 cm2 stands for confusion matrix2
 
