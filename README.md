@@ -5,24 +5,25 @@
 This project aims to predict product purchases based on a bank telemarketing dataset using machine learning techniques. Specifically, the Random Forest Classifier algorithm is employed to handle the categorical dataset. Additionally, Recursive Feature Elimination (RFE) is implemented to enhance the model by selecting the most important features.
 
 # "steps of project" 
-Introduction
-data preprocessing 
-Model Training
-Feature Selection
-Evaluation
-Results
-Conclusion
+1. Introduction
+2. data preprocessing 
+3. Model Training
+4. Feature Selection
+5. Evaluation
+6. Results
+7. Conclusion
 
 
 # Introduction
 In this project, i predict whether a client will purchase a product based on various features provided in a bank telemarketing dataset. The Random Forest Classifier is chosen due to its effectiveness in handling categorical data. i also apply Recursive Feature Elimination (RFE) to improve the model by selecting the most significant features.
 
-# data preprocessing
+# Data preprocessing
 # Import Libraries
 First, we import the necessary libraries:
 
 # import pandas as pd
 # Read the Dataset
+```puthon
 Load the dataset from a CSV file:
 f = pd.read_csv('bank.csv')
 
@@ -47,7 +48,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_
 
 # Random forest classifier 
 
-from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import RandomForestClassifier
 
 # TRAIN THE MODEL 
 
@@ -59,7 +60,7 @@ R_predict = rfc.predict(X_test)
 from sklearn.metrics import confusion_matrix 
 cm    = confusion_matrix(Y_test,R_predict)
 score = rfc.score(X_test,Y_test) 
-
+```
 ![Screenshot 2024-07-19 200449](https://github.com/user-attachments/assets/303bfd7f-5780-4e26-9b4d-0d1df8293d61)
 
 cm stands for confusion matrix
@@ -68,6 +69,7 @@ cm stands for confusion matrix
 
 
 # Feature Selection
+```python
 -Recursive Feature Elimination (RFE): 
 Apply RFE to select the top 30 features.
 
@@ -91,7 +93,7 @@ R_predict2 = rfc2.predict(X_test_rfe)
 
 cm2   = confusion_matrix(Y_test,R_predict2)
 score2 = rfc2.score(X_test_rfe,Y_test)   
-
+```
 ![Screenshot 2024-07-19 200511](https://github.com/user-attachments/assets/30401111-c0fc-4cd2-9d37-62edbc3f70c4)
 
 
@@ -100,20 +102,19 @@ cm2 stands for confusion matrix2
 ![Screenshot 2024-07-18 180930](https://github.com/user-attachments/assets/1d4be301-9282-47f4-a2dd-d31caaecf6fb)
 
 
-# get the columns names 
-
+# Get the columns names 
+```python
 columns = list(X.columns)
 
 # get the ranking of the features
-# ranked 1 for selected feature 
-
+ranked 1 for selected feature 
 ranking = rfe2.ranking_
 
-# get the feature importance 
+# Get the feature importance 
 
 feature_importance = rfc.feature_importances_
 
-# creat the data fram of features selected, features ranking and features importance
+# create the data fram of features selected, features ranking and features importance
 
 
 rfe_selected = pd.DataFrame()
@@ -135,7 +136,7 @@ Displays the performance of the model.
 Indicates the model's accuracy on the test set.
 - Feature Ranking:
 Lists the importance and ranking of each feature.
-
+```
 ![Screenshot 2024-07-18 181213](https://github.com/user-attachments/assets/dd0a6d9a-fa94-4796-a225-6d5d68a03a74)
 
 ![Screenshot 2024-07-18 181237](https://github.com/user-attachments/assets/ab7d55b5-fcf8-4a31-a1b1-098f8374dd0a)
