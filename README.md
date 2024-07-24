@@ -4,7 +4,7 @@
 ## Predict Product Purchases for Bank Telemarketing Campaign
 This project aims to predict product purchases based on a bank telemarketing dataset using machine learning techniques. Specifically, the Random Forest Classifier algorithm is employed to handle the categorical dataset. Additionally, Recursive Feature Elimination (RFE) is implemented to enhance the model by selecting the most important features.
 
-## "steps of project" 
+## steps of project
 1. Introduction
 2. data preprocessing 
 3. Model Training
@@ -49,27 +49,27 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_
 # Random forest classifier 
 
 from sklearn.ensemble import RandomForestClassifier
-
+```
 # TRAIN THE MODEL 
-
+``` python
 rfc = RandomForestClassifier(random_state = 1234)
 rfc.fit(X_train,Y_train)
 R_predict = rfc.predict(X_test)
-
+```
 # Evaluate the model 
+``` python
 from sklearn.metrics import confusion_matrix 
 cm    = confusion_matrix(Y_test,R_predict)
 score = rfc.score(X_test,Y_test) 
-```
+``` 
 ![Screenshot 2024-07-19 200449](https://github.com/user-attachments/assets/303bfd7f-5780-4e26-9b4d-0d1df8293d61)
-
 
 ![Screenshot 2024-07-18 180911](https://github.com/user-attachments/assets/d0defb6c-c326-441e-9937-18fd0cd6afef)
 
 
-# Feature Selection
+# feature selection
 ```python
--Recursive Feature Elimination (RFE): 
+Recursive Feature Elimination (RFE): 
 Apply RFE to select the top 30 features.
 
 from sklearn.feature_selection import RFE
@@ -122,7 +122,7 @@ dataframe2 = pd.DataFrame(ranking)
 dataframe3 = pd.DataFrame(feature_importance)
 rfe_selected = pd.concat([dataframe1,dataframe2,dataframe3],axis =1)
 rfe_selected.columns = ['columns','Ranking','feature_importance']
-
+```
 
 
 # Results
@@ -134,7 +134,7 @@ Displays the performance of the model.
 Indicates the model's accuracy on the test set.
 - Feature Ranking:
 Lists the importance and ranking of each feature.
-```
+
 ![Screenshot 2024-07-18 181213](https://github.com/user-attachments/assets/dd0a6d9a-fa94-4796-a225-6d5d68a03a74)
 
 ![Screenshot 2024-07-18 181237](https://github.com/user-attachments/assets/ab7d55b5-fcf8-4a31-a1b1-098f8374dd0a)
