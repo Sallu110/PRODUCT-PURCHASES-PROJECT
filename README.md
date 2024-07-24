@@ -1,10 +1,10 @@
 # PRODUCT-PURCHASES-PROJECT
 
 
-# Predict Product Purchases for Bank Telemarketing Campaign
+## Predict Product Purchases for Bank Telemarketing Campaign
 This project aims to predict product purchases based on a bank telemarketing dataset using machine learning techniques. Specifically, the Random Forest Classifier algorithm is employed to handle the categorical dataset. Additionally, Recursive Feature Elimination (RFE) is implemented to enhance the model by selecting the most important features.
 
-# "steps of project" 
+## "steps of project" 
 1. Introduction
 2. data preprocessing 
 3. Model Training
@@ -14,16 +14,16 @@ This project aims to predict product purchases based on a bank telemarketing dat
 7. Conclusion
 
 
-# Introduction
+### Introduction
 In this project, i predict whether a client will purchase a product based on various features provided in a bank telemarketing dataset. The Random Forest Classifier is chosen due to its effectiveness in handling categorical data. i also apply Recursive Feature Elimination (RFE) to improve the model by selecting the most significant features.
 
-# Data preprocessing
-# Import Libraries
+### Data preprocessing
+Import Libraries
 First, we import the necessary libraries:
-
-# import pandas as pd
+``` python
+import pandas as pd
 # Read the Dataset
-```puthon
+
 Load the dataset from a CSV file:
 f = pd.read_csv('bank.csv')
 
@@ -48,7 +48,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_
 
 # Random forest classifier 
 
-# from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 # TRAIN THE MODEL 
 
@@ -63,7 +63,6 @@ score = rfc.score(X_test,Y_test)
 ```
 ![Screenshot 2024-07-19 200449](https://github.com/user-attachments/assets/303bfd7f-5780-4e26-9b4d-0d1df8293d61)
 
-cm stands for confusion matrix
 
 ![Screenshot 2024-07-18 180911](https://github.com/user-attachments/assets/d0defb6c-c326-441e-9937-18fd0cd6afef)
 
@@ -73,7 +72,7 @@ cm stands for confusion matrix
 -Recursive Feature Elimination (RFE): 
 Apply RFE to select the top 30 features.
 
-# from sklearn.feature_selection import RFE
+from sklearn.feature_selection import RFE
 
 rfc2 = RandomForestClassifier()
 rfe2 = RFE(estimator = rfc2,n_features_to_select=30,step = 1)
@@ -97,7 +96,6 @@ score2 = rfc2.score(X_test_rfe,Y_test)
 ![Screenshot 2024-07-19 200511](https://github.com/user-attachments/assets/30401111-c0fc-4cd2-9d37-62edbc3f70c4)
 
 
-cm2 stands for confusion matrix2
 
 ![Screenshot 2024-07-18 180930](https://github.com/user-attachments/assets/1d4be301-9282-47f4-a2dd-d31caaecf6fb)
 
