@@ -50,13 +50,13 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_
 
 from sklearn.ensemble import RandomForestClassifier
 ```
-# TRAIN THE MODEL 
+### TRAIN THE MODEL 
 ``` python
 rfc = RandomForestClassifier(random_state = 1234)
 rfc.fit(X_train,Y_train)
 R_predict = rfc.predict(X_test)
 ```
-# Evaluate the model 
+### Evaluate the model 
 ``` python
 from sklearn.metrics import confusion_matrix 
 cm    = confusion_matrix(Y_test,R_predict)
@@ -67,7 +67,7 @@ score = rfc.score(X_test,Y_test)
 ![Screenshot 2024-07-18 180911](https://github.com/user-attachments/assets/d0defb6c-c326-441e-9937-18fd0cd6afef)
 
 
-# feature selection
+### feature selection
 ```python
 Recursive Feature Elimination (RFE): 
 Apply RFE to select the top 30 features.
@@ -125,7 +125,7 @@ rfe_selected.columns = ['columns','Ranking','feature_importance']
 ```
 
 
-# Results
+### Results
 After training and evaluating the model, the results include:
 
 - Confusion Matrix: 
@@ -144,7 +144,7 @@ Lists the importance and ranking of each feature.
 
 
 
-# Conclusion
+### Conclusion
 This project demonstrates the use of Random Forest Classifier and Recursive Feature Elimination for predicting product purchases in a bank telemarketing campaign. The model is evaluated and significant features are identified, enhancing the overall performance.
 
 
