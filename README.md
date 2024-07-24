@@ -99,9 +99,9 @@ score2 = rfc2.score(X_test_rfe,Y_test)
 
 ![Screenshot 2024-07-18 180930](https://github.com/user-attachments/assets/1d4be301-9282-47f4-a2dd-d31caaecf6fb)
 
-
+``` python
 # Get the columns names 
-```python
+
 columns = list(X.columns)
 
 # get the ranking of the features
