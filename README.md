@@ -4,7 +4,7 @@
 ## Predict Product Purchases for Bank Telemarketing Campaign
 This project aims to predict product purchases based on a bank telemarketing dataset using machine learning techniques. Specifically, the Random Forest Classifier algorithm is employed to handle the categorical dataset. Additionally, Recursive Feature Elimination (RFE) is implemented to enhance the model by selecting the most important features.
 
-## steps of project
+## Steps of project
 1. Introduction
 2. data preprocessing 
 3. Model Training
@@ -50,7 +50,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_
 
 from sklearn.ensemble import RandomForestClassifier
 ```
-### TRAIN THE MODEL 
+### Model training 
 ``` python
 rfc = RandomForestClassifier(random_state = 1234)
 rfc.fit(X_train,Y_train)
