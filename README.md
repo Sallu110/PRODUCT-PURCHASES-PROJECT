@@ -6,16 +6,21 @@ This project aims to predict product purchases based on a bank telemarketing dat
 
 ## Steps of project
 1. Introduction
-2. data preprocessing 
-3. Model Training
-4. Feature Selection
-5. Evaluation
-6. Results
-7. Conclusion
+2. dataset.
+3. data preprocessing 
+4. Model Training
+5. Feature Selection
+6. Evaluation
+7. Results
+8. Conclusion
 
 
 ### Introduction
 In this project, i predict whether a client will purchase a product based on various features provided in a bank telemarketing dataset. The Random Forest Classifier is chosen due to its effectiveness in handling categorical data. i also apply Recursive Feature Elimination (RFE) to improve the model by selecting the most significant features.
+
+### Dataset
+
+![Screenshot 2024-08-11 102804](https://github.com/user-attachments/assets/4096f94a-d388-4e21-92df-484ef8bb4f25)
 
 ### Data preprocessing
 Import Libraries
